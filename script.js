@@ -608,7 +608,7 @@ const frameCount = 300;
     });
   });
 
-  const API_URL = 'http://localhost:3000/api';
+  const API_URL = 'https://rahul-portfolio-pkbt.onrender.com/api';
 
   async function fetchProjects() {
     try {
