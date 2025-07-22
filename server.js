@@ -8,24 +8,24 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Configure multer for image uploads
+// Configure multer for image uploads (kept for potential future use, but not used in project routes)
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        cb(null, uniqueSuffix + path.extname(file.originalname));
+        cb(null, uniqueSuffix + path.extname(file.originalName));
     }
 });
 const upload = multer({
     storage,
     fileFilter: (req, file, cb) => {
         if (!file) {
-            return cb(null, false); // Allow no file for updates
+            return cb(null, false); // Allow no file
         }
         const filetypes = /jpeg|jpg|png/;
-        const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+        const extname = filetypes.test(path.extname(file.originalName).toLowerCase());
         const mimetype = filetypes.test(file.mimetype);
         if (extname && mimetype) {
             return cb(null, true);
@@ -102,12 +102,12 @@ app.get('/api/projects', async (req, res) => {
     }
 });
 
-app.post('/api/projects', upload.single('image'), async (req, res) => {
-    console.log('POST /api/projects called with body:', req.body, 'file:', req.file);
+app.post('/api/projects', async (req, res) => {
+    console.log('POST /api/projects called with body:', JSON.stringify(req.body, null, 2));
     try {
-        const { headline, subtitle, title, description, link, linkText, imageAlt } = req.body;
-        if (!headline || !subtitle || !title || !description || !link || !linkText || !imageAlt || !req.file) {
-            return res.status(400).json({ message: 'All fields, including image, are required for new projects' });
+        const { headline, subtitle, title, description, link, linkText, image, imageAlt } = req.body;
+        if (!headline || !subtitle || !title || !description || !link || !linkText || !image || !imageAlt) {
+            return res.status(400).json({ message: 'All fields, including image URL, are required for new projects' });
         }
         const projects = await readProjects();
         const newProject = {
@@ -118,7 +118,7 @@ app.post('/api/projects', upload.single('image'), async (req, res) => {
             description,
             link,
             linkText,
-            image: `uploads/${req.file.filename}`,
+            image,
             imageAlt
         };
         projects.push(newProject);
@@ -130,13 +130,13 @@ app.post('/api/projects', upload.single('image'), async (req, res) => {
     }
 });
 
-app.put('/api/projects/:id', upload.single('image'), async (req, res) => {
-    console.log('PUT /api/projects/:id called with body:', req.body, 'file:', req.file);
+app.put('/api/projects/:id', async (req, res) => {
+    console.log('PUT /api/projects/:id called with body:', JSON.stringify(req.body, null, 2));
     try {
         const { id } = req.params;
-        const { headline, subtitle, title, description, link, linkText, imageAlt } = req.body;
+        const { headline, subtitle, title, description, link, linkText, image, imageAlt } = req.body;
         if (!headline || !subtitle || !title || !description || !link || !linkText || !imageAlt) {
-            return res.status(400).json({ message: 'All fields are required' });
+            return res.status(400).json({ message: 'All fields except image URL are required' });
         }
         const projects = await readProjects();
         const index = projects.findIndex(p => p.id === parseInt(id));
@@ -151,7 +151,7 @@ app.put('/api/projects/:id', upload.single('image'), async (req, res) => {
             description,
             link,
             linkText,
-            image: req.file ? `uploads/${req.file.filename}` : projects[index].image,
+            image: image || projects[index].image,
             imageAlt
         };
         projects[index] = updatedProject;
@@ -193,7 +193,7 @@ app.get('/api/contacts', async (req, res) => {
 });
 
 app.post('/api/contact', async (req, res) => {
-    console.log('POST /api/contact called with body:', req.body);
+    console.log('POST /api/contact called with body:', JSON.stringify(req.body, null, 2));
     try {
         const { name, email, message } = req.body;
         if (!name || !email || !message) {
