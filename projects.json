@@ -7,7 +7,7 @@
     "description": "Developed a full-stack application with a Node.js backend and responsive web interface for cyber cafe services like PAN card, voter ID, and resume design. Integrated a WhatsApp bot using WhatsApp-Web.js for document submission and order tracking via OpenRouter AI API. Features secure file uploads with Multer and SQLite, plus a PDF Logo Adder tool. Technologies: Node.js, Express.js, SQLite, WhatsApp-Web.js, Multer, Axios, HTML, CSS, JavaScript.",
     "link": "https://cafebuddy.site",
     "linkText": "Explore Features",
-    "image": "https://i.ibb.co/DPxqvGyM/1752864322877-404129203.png%22%20alt=%221752864322877-404129203",
+    "image": "https://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
     "imageAlt": "Cyber Cafe Services"
   },
   {
@@ -18,7 +18,7 @@
     "description": "Created a Python-based Telegram bot for quizzes (Police Bharti, UPSC) with JSON-stored questions. Integrated Hugging Face InferenceClient for multilingual AI responses and added an auto-sleep feature. Designed commands (/start, /quiz, /quit) with robust error handling. Technologies: Python, python-telegram-bot, Hugging Face, JSON, asyncio.",
     "link": "#",
     "linkText": "Learn More",
-    "image": "http://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
+    "image": "https://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
     "imageAlt": "Telegram Quiz Bot"
   },
   {
@@ -29,7 +29,7 @@
     "description": "Built a web app featuring a 3D book reader focused on Chhatrapati Shivaji Maharaj, with dynamic PDF upload using pdfjsLib. Implemented a quiz system with 20 random questions, responsive design, and theme toggle. Enhanced with a bulky spine effect for visual appeal. Technologies: HTML, CSS, JavaScript, pdfjsLib.",
     "link": "#",
     "linkText": "Learn More",
-    "image": "./book-reader.jpeg",
+    "image": "https://i.ibb.co/rGyqd4V/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
     "imageAlt": "3D Book Reader"
   },
   {
@@ -40,7 +40,7 @@
     "description": "Developed a Tic-Tac-Toe game with move validation and a Library Management System with CRUD operations. Utilized binary file handling and DSA for efficient data management. Planned enhancements include AI for Tic-Tac-Toe and a borrowing system for the library. Technologies: C++, File I/O, Structs, DSA.",
     "link": "#",
     "linkText": "Learn More",
-    "image": "uploads/1752678464810-524565326.jpg",
+    "image": "https://via.placeholder.com/300x200?text=C++Console+Apps",
     "imageAlt": "C++ Console Apps"
   }
 ]
