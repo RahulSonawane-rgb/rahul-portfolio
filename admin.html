@@ -62,16 +62,8 @@
             resize: vertical;
             grid-column: span 2;
         }
-        #project-form input[type="file"] {
-            padding: 8px 0;
-        }
-        #project-image-preview {
-            max-width: 150px;
-            margin-top: 10px;
-            border-radius: 5px;
-            display: none;
-            grid-column: span 2;
-            border: 1px solid #26a69a;
+        #project-form input[type="text"] {
+            padding: 10px;
         }
         .form-buttons {
             grid-column: span 2;
@@ -175,7 +167,7 @@
             #project-form {
                 grid-template-columns: 1fr;
             }
-            #project-form textarea, #project-image-preview, .form-buttons {
+            #project-form textarea, .form-buttons {
                 grid-column: span 1;
             }
             .project-list, .contact-list {
@@ -196,7 +188,7 @@
         
         <div class="section">
             <h3>Add/Edit Project</h3>
-            <form id="project-form" enctype="multipart/form-data">
+            <form id="project-form">
                 <input type="hidden" id="project-id">
                 <input type="text" id="project-headline" placeholder="Headline" required>
                 <input type="text" id="project-subtitle" placeholder="Subtitle" required>
@@ -204,8 +196,7 @@
                 <input type="text" id="project-link" placeholder="Link" required>
                 <input type="text" id="project-linkText" placeholder="Link Text" required>
                 <input type="text" id="project-imageAlt" placeholder="Image Alt Text" required>
-                <input type="file" id="project-image" accept="image/jpeg,image/jpg,image/png">
-                <img id="project-image-preview" src="" alt="Image Preview">
+                <input type="text" id="project-image" placeholder="Image URL (e.g., https://example.com/image.jpg)">
                 <textarea id="project-description" placeholder="Description" required></textarea>
                 <div class="form-buttons">
                     <button type="submit">Save Project</button>
@@ -228,7 +219,7 @@
     </div>
 
     <script>
-        const API_URL = 'https://rahul-portfolio-pkbt.onrender.com/api';
+        const API_URL = 'http://localhost:3000/api';
 
         async function fetchProjects() {
             try {
@@ -319,10 +310,7 @@
                     document.getElementById('project-link').value = project.link;
                     document.getElementById('project-linkText').value = project.linkText;
                     document.getElementById('project-imageAlt').value = project.imageAlt;
-                    const preview = document.getElementById('project-image-preview');
-                    preview.src = project.image;
-                    preview.style.display = 'block';
-                    document.getElementById('project-image').value = '';
+                    document.getElementById('project-image').value = project.image || '';
                     document.getElementById('cancel-button').style.display = 'block';
                     document.getElementById('admin-status').className = '';
                     document.getElementById('admin-status').textContent = 'Editing project...';
@@ -384,23 +372,9 @@
             }
         }
 
-        document.getElementById('project-image').addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const preview = document.getElementById('project-image-preview');
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
         document.getElementById('cancel-button').addEventListener('click', () => {
             document.getElementById('project-form').reset();
             document.getElementById('project-id').value = '';
-            document.getElementById('project-image-preview').style.display = 'none';
             document.getElementById('cancel-button').style.display = 'none';
             document.getElementById('admin-status').className = '';
             document.getElementById('admin-status').textContent = 'Edit cancelled.';
@@ -409,23 +383,18 @@
         document.getElementById('project-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const id = document.getElementById('project-id').value;
-            const formData = new FormData();
-            formData.append('headline', document.getElementById('project-headline').value);
-            formData.append('subtitle', document.getElementById('project-subtitle').value);
-            formData.append('title', document.getElementById('project-title').value);
-            formData.append('description', document.getElementById('project-description').value);
-            formData.append('link', document.getElementById('project-link').value);
-            formData.append('linkText', document.getElementById('project-linkText').value);
-            formData.append('imageAlt', document.getElementById('project-imageAlt').value);
-            const imageFile = document.getElementById('project-image').files[0];
-            if (imageFile) {
-                formData.append('image', imageFile);
-            } else if (!id) {
-                document.getElementById('admin-status').className = 'error';
-                document.getElementById('admin-status').textContent = 'Image is required for new projects.';
-                return;
-            }
+            const projectData = {
+                headline: document.getElementById('project-headline').value,
+                subtitle: document.getElementById('project-subtitle').value,
+                title: document.getElementById('project-title').value,
+                description: document.getElementById('project-description').value,
+                link: document.getElementById('project-link').value,
+                linkText: document.getElementById('project-linkText').value,
+                imageAlt: document.getElementById('project-imageAlt').value,
+                image: document.getElementById('project-image').value || undefined
+            };
 
+            
             try {
                 document.getElementById('loading').style.display = 'block';
                 const method = id ? 'PUT' : 'POST';
@@ -433,7 +402,10 @@
                 console.log(`Submitting to ${url} with method ${method}`);
                 const response = await fetch(url, {
                     method,
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(projectData)
                 });
                 if (!response.ok) {
                     const data = await response.json();
@@ -445,7 +417,6 @@
                 document.getElementById('admin-status').textContent = id ? 'Project updated successfully!' : 'Project added successfully!';
                 document.getElementById('project-form').reset();
                 document.getElementById('project-id').value = '';
-                document.getElementById('project-image-preview').style.display = 'none';
                 document.getElementById('cancel-button').style.display = 'none';
                 fetchProjects();
             } catch (error) {
