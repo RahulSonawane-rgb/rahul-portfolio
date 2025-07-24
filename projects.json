@@ -7,7 +7,7 @@
     "description": "Developed a full-stack application with a Node.js backend and responsive web interface for cyber cafe services like PAN card, voter ID, and resume design. Integrated a WhatsApp bot using WhatsApp-Web.js for document submission and order tracking via OpenRouter AI API. Features secure file uploads with Multer and SQLite, plus a PDF Logo Adder tool. Technologies: Node.js, Express.js, SQLite, WhatsApp-Web.js, Multer, Axios, HTML, CSS, JavaScript.",
     "link": "https://cafebuddy.site",
     "linkText": "Explore Features",
-    "image": "https://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
+    "image": "https://i.ibb.co/DPxqvGyM/1752864322877-404129203.png",
     "imageAlt": "Cyber Cafe Services"
   },
   {
@@ -16,24 +16,13 @@
     "subtitle": "Educational AI Bot",
     "title": "Interactive Quiz and Chat System",
     "description": "Created a Python-based Telegram bot for quizzes (Police Bharti, UPSC) with JSON-stored questions. Integrated Hugging Face InferenceClient for multilingual AI responses and added an auto-sleep feature. Designed commands (/start, /quiz, /quit) with robust error handling. Technologies: Python, python-telegram-bot, Hugging Face, JSON, asyncio.",
-    "link": "#",
-    "linkText": "Learn More",
+    "link": "https://web.telegram.org/k/#@GagGoblin_bot",
+    "linkText": "Explore Bot",
     "image": "https://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
     "imageAlt": "Telegram Quiz Bot"
   },
   {
     "id": 3,
-    "headline": "Dynamic Book Reader",
-    "subtitle": "Interactive Learning",
-    "title": "Engaging 3D Book and Quiz Platform",
-    "description": "Built a web app featuring a 3D book reader focused on Chhatrapati Shivaji Maharaj, with dynamic PDF upload using pdfjsLib. Implemented a quiz system with 20 random questions, responsive design, and theme toggle. Enhanced with a bulky spine effect for visual appeal. Technologies: HTML, CSS, JavaScript, pdfjsLib.",
-    "link": "#",
-    "linkText": "Learn More",
-    "image": "https://i.ibb.co/rGyqd4V/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
-    "imageAlt": "3D Book Reader"
-  },
-  {
-    "id": 4,
     "headline": "C++ Console Applications",
     "subtitle": "Console-Based Solutions",
     "title": "Efficient Game and Management Systems",
@@ -42,5 +31,16 @@
     "linkText": "Learn More",
     "image": "https://via.placeholder.com/300x200?text=C++Console+Apps",
     "imageAlt": "C++ Console Apps"
+  },
+  {
+    "id": 4,
+    "headline": "Dynamic Book Reader",
+    "subtitle": "Interactive Learning",
+    "title": "Engaging 3D Book and Quiz Platform",
+    "description": "Built a web app featuring a 3D book reader focused on Chhatrapati Shivaji Maharaj, with dynamic PDF upload using pdfjsLib. Implemented a quiz system with 20 random questions, responsive design, and theme toggle. Enhanced with a bulky spine effect for visual appeal. Technologies: HTML, CSS, JavaScript, pdfjsLib.",
+    "link": "#",
+    "linkText": "Learn More",
+    "image": "#",
+    "imageAlt": "3D Book Reader"
   }
 ]
