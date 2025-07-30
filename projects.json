@@ -16,21 +16,21 @@
     "subtitle": "Educational AI Bot",
     "title": "Interactive Quiz and Chat System",
     "description": "Created a Python-based Telegram bot for quizzes (Police Bharti, UPSC) with JSON-stored questions. Integrated Hugging Face InferenceClient for multilingual AI responses and added an auto-sleep feature. Designed commands (/start, /quiz, /quit) with robust error handling. Technologies: Python, python-telegram-bot, Hugging Face, JSON, asyncio.",
-    "link": "https://web.telegram.org/k/#@GagGoblin_bot",
-    "linkText": "Explore Bot",
+    "link": "#",
+    "linkText": "Learn More",
     "image": "https://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
     "imageAlt": "Telegram Quiz Bot"
   },
   {
     "id": 3,
-    "headline": "C++ Console Applications",
-    "subtitle": "Console-Based Solutions",
-    "title": "Efficient Game and Management Systems",
-    "description": "Developed a Tic-Tac-Toe game with move validation and a Library Management System with CRUD operations. Utilized binary file handling and DSA for efficient data management. Planned enhancements include AI for Tic-Tac-Toe and a borrowing system for the library. Technologies: C++, File I/O, Structs, DSA.",
-    "link": "#",
-    "linkText": "Learn More",
-    "image": "https://via.placeholder.com/300x200?text=C++Console+Apps",
-    "imageAlt": "C++ Console Apps"
+    "headline": "Worker Management System",
+    "subtitle": "Web-Based Workforce Solution",
+    "title": "Streamlined Worker and Attendance Management",
+    "description": "Built a web-based Worker Management System using Google Apps Script, integrated with Google Sheets for data storage. Features include worker management, daily attendance tracking, attendance correction, and custom pay report generation. The system offers a modern, responsive UI with glassmorphism design. Future enhancements include advanced error handling and user authentication. Technologies: Google Apps Script, HTML, CSS, JavaScript, Google Sheets.",
+    "link": "https://github.com/RahulSonawane-rgb/google-sheets-worker-app",
+    "linkText": "Source code",
+    "image": "https://i.ibb.co/VcBqx03b/Worker-Project.jpg",
+    "imageAlt": "Worker Management System Interface"
   },
   {
     "id": 4,
@@ -40,7 +40,18 @@
     "description": "Built a web app featuring a 3D book reader focused on Chhatrapati Shivaji Maharaj, with dynamic PDF upload using pdfjsLib. Implemented a quiz system with 20 random questions, responsive design, and theme toggle. Enhanced with a bulky spine effect for visual appeal. Technologies: HTML, CSS, JavaScript, pdfjsLib.",
     "link": "#",
     "linkText": "Learn More",
-    "image": "#",
+    "image": "",
     "imageAlt": "3D Book Reader"
+  },
+  {
+    "id": 5,
+    "headline": "C++ Console Applications",
+    "subtitle": "Console-Based Solutions",
+    "title": "Efficient Game and Management Systems",
+    "description": "Developed a Tic-Tac-Toe game with move validation and a Library Management System with CRUD operations. Utilized binary file handling and DSA for efficient data management. Planned enhancements include AI for Tic-Tac-Toe and a borrowing system for the library. Technologies: C++, File I/O, Structs, DSA.",
+    "link": "#",
+    "linkText": "Learn More",
+    "image": "https://via.placeholder.com/300x200?text=C++Console+Apps",
+    "imageAlt": "C++ Console Apps"
   }
 ]
