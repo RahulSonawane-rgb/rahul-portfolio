@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Decode C++ with DSA",
+    "issuer": "pwskills",
+    "date": "-",
+    "link": "https://www.coursera.org/certificates/full-stack-web-development",
+    "linkText": "View Certificate",
+    "image": "https://cdn.pwskills.com/assets/uploads/course-thumbnail/bc433f80-59e9-4267-885e-a17ddd39214d.jpeg",
+    "imageAlt": "Decode C++ with DSA Certificate",
+    "description": "Completed a focused course on C++ programming and Data Structures and Algorithms. Mastered key data structures (arrays, linked lists, trees, graphs) and algorithms (sorting, searching, dynamic programming). Developed efficient coding and problem-solving skills through hands-on projects."
+  },
+  {
+    "id": 2,
+    "title": "MySQL Upgrade",
+    "issuer": "MindLuster",
+    "date": "2025-03-18",
+    "link": "https://www.mindluster.com/certified/download_pdf/2a7d6397",
+    "linkText": "View Certificate",
+    "image": "https://www.mindluster.com/storage/cer/2a7d6397.jpg",
+    "imageAlt": "MySQL Upgrade Certificate ",
+    "description": "Completed a focused course on MySQL, mastering database management and querying using SQL. Gained expertise in designing, updating, and maintaining relational databases, with hands-on experience in optimizing data storage and retrieval for web applications."
+  },
+  {
+    "title": "React JS for Beginners",
+    "issuer": "MindLuster",
+    "date": "2025-07-04",
+    "link": "https://www.mindluster.com/certified/download_pdf/78235add",
+    "linkText": "View Certificate",
+    "imageAlt": "React JS Certificate ",
+    "image": "https://www.mindluster.com/storage/cer/78235add.jpg",
+    "description": "Completed an introductory course on React JS, mastering the fundamentals of building dynamic and interactive user interfaces. Gained proficiency in creating reusable components, managing state, and handling events, with hands-on experience in developing modern web applications.",
+    "id": 3
+  }
+]
