@@ -160,7 +160,49 @@ html, body {
     transform: scale(1.05);
 }
 
+@media (max-width: 992px) {
+    #nav > h3 {
+        font-size: 1.8rem;
+    }
+    .nav-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
+
 @media (max-width: 768px) {
+    #nav {
+        height: 60px;
+        padding: 0 20px;
+    }
+    #nav > h3 {
+        font-size: 1.5rem;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        backdrop-filter: blur(2px);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-button {
+        width: 80%;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
     .cert-heading {
         font-size: 2rem;
     }
@@ -169,5 +211,29 @@ html, body {
     }
     .cert-title {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav {
+        height: 50px;
+        padding: 0 15px;
+    }
+    #nav > h3 {
+        font-size: 1.2rem;
+    }
+    .nav-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 90%;
+    }
+    .nav-links {
+        padding: 15px 0;
+    }
+    .cert-heading {
+        font-size: 1.8rem;
+    }
+    .cert-title {
+        font-size: 1.3rem;
     }
 }
