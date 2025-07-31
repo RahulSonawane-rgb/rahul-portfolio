@@ -16,7 +16,7 @@
     "subtitle": "Educational AI Bot",
     "title": "Interactive Quiz and Chat System",
     "description": "Created a Python-based Telegram bot for quizzes (Police Bharti, UPSC) with JSON-stored questions. Integrated Hugging Face InferenceClient for multilingual AI responses and added an auto-sleep feature. Designed commands (/start, /quiz, /quit) with robust error handling. Technologies: Python, python-telegram-bot, Hugging Face, JSON, asyncio.",
-    "link": "#",
+    "link": "https://t.me/GagGoblin_bot",
     "linkText": "Explore Bot",
     "image": "https://i.ibb.co/rGyqd4V1/Gemini-Generated-Image-l0h6ftl0h6ftl0h6.png",
     "imageAlt": "Telegram Quiz Bot"
