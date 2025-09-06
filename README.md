@@ -165,7 +165,7 @@ This project is for personal use and not licensed for distribution.
 
 ## Contact
 
-For issues or suggestions, contact Rahul Sonawane via the portfolio’s contact form or email (add your email here).
+For issues or suggestions, contact Rahul Sonawane via the portfolio’s contact form or email (sorahul54@gmail.com).
 
 ---
 
