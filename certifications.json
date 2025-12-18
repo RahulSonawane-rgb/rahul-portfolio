@@ -1,14 +1,25 @@
 [
   {
     "id": 1,
-    "title": "MySQL Upgrade",
-    "issuer": "MindLuster",
-    "date": "2025-03-18",
-    "link": "https://www.mindluster.com/certified/download_pdf/2a7d6397",
+    "title": "Decode DSA with C++",
+    "issuer": "PW Skills",
+    "date": "2024-11-20",
+    "link": "https://cdn.pwskills.com/learn/certificates/f6863345-6157-40fb-9554-bd00d0d600ed.pdf",
     "linkText": "View Certificate",
-    "image": "https://www.mindluster.com/storage/cer/2a7d6397.jpg",
-    "imageAlt": "MySQL Upgrade Certificate ",
-    "description": "Completed a focused course on MySQL, mastering database management and querying using SQL. Gained expertise in designing, updating, and maintaining relational databases, with hands-on experience in optimizing data storage and retrieval for web applications."
+    "image": "https://i.ibb.co/ymLX7ZXw/PW-Skill.png",
+    "imageAlt": "PW Skills DSA C++ Certificate",
+    "description": "Successfully completed an intensive Data Structures and Algorithms program using C++. Developed a deep understanding of algorithmic complexity, recursion, and advanced data structures like Trees, Graphs, and Heaps. Solved numerous complex problems, sharpening logical reasoning and optimization skills essential for high-performance software development."
+  },
+  {
+    "id": 2,
+    "title": "Structured Query Language (SQL) Hindi",
+    "issuer": "MindLuster",
+    "date": "2025-03-19",
+    "link": "https://www.mindluster.com/certified/download_pdf/9bd23379",
+    "linkText": "View Certificate",
+    "image": "https://www.mindluster.com/storage/cer/9bd23379.jpg",
+    "imageAlt": "SQL Hindi Certificate ",
+    "description": "Completed a comprehensive 137-lesson course on Structured Query Language (SQL). Mastered database fundamentals including CRUD operations, complex joins, aggregate functions, and subqueries. Gained hands-on experience in managing relational databases and optimizing queries for efficient data retrieval."
   },
   {
     "title": "React JS for Beginners",
@@ -19,7 +30,7 @@
     "imageAlt": "React JS Certificate ",
     "image": "https://www.mindluster.com/storage/cer/78235add.jpg",
     "description": "Completed an introductory course on React JS, mastering the fundamentals of building dynamic and interactive user interfaces. Gained proficiency in creating reusable components, managing state, and handling events, with hands-on experience in developing modern web applications.",
-    "id": 2
+    "id": 3
   },
   {
     "title": "HTML and HTML5 Hindi",
@@ -30,6 +41,6 @@
     "imageAlt": "HTML and HTML5 certificate ",
     "image": "https://www.mindluster.com/storage/cer/b86f0924.jpg",
     "description": "Completed a comprehensive course on HTML and HTML5, mastering the fundamentals of web development. Gained expertise in creating structured, semantic web content, utilizing HTML5 features for multimedia, forms, and responsive design, with hands-on experience in building modern, accessible websites.",
-    "id": 3
+    "id": 4
   }
 ]
