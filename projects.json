@@ -31,27 +31,5 @@
     "linkText": "Source code",
     "image": "https://i.ibb.co/VcBqx03b/Worker-Project.jpg",
     "imageAlt": "Worker Management System Interface"
-  },
-  {
-    "id": 4,
-    "headline": "Dynamic Book Reader",
-    "subtitle": "Interactive Learning",
-    "title": "Engaging 3D Book and Quiz Platform",
-    "description": "Built a web app featuring a 3D book reader focused on Chhatrapati Shivaji Maharaj, with dynamic PDF upload using pdfjsLib. Implemented a quiz system with 20 random questions, responsive design, and theme toggle. Enhanced with a bulky spine effect for visual appeal. Technologies: HTML, CSS, JavaScript, pdfjsLib.",
-    "link": "#",
-    "linkText": "Learn More",
-    "image": "",
-    "imageAlt": "3D Book Reader"
-  },
-  {
-    "id": 5,
-    "headline": "C++ Console Applications",
-    "subtitle": "Console-Based Solutions",
-    "title": "Efficient Game and Management Systems",
-    "description": "Developed a Tic-Tac-Toe game with move validation and a Library Management System with CRUD operations. Utilized binary file handling and DSA for efficient data management. Planned enhancements include AI for Tic-Tac-Toe and a borrowing system for the library. Technologies: C++, File I/O, Structs, DSA.",
-    "link": "#",
-    "linkText": "Learn More",
-    "image": "https://via.placeholder.com/300x200?text=C++Console+Apps",
-    "imageAlt": "C++ Console Apps"
   }
 ]
