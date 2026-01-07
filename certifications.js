@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tryLocomotive();
 
-    const API_URL = 'https://rahul-portfolio-pkbt.onrender.com/api';
+    const API_URL = 'https://rahul-portfolio-4zj5.onrender.com/api';
 
     async function fetchCertifications() {
         try {
